@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(1);
-	var makeBackgroundRed = ('./background.js');
+	var makeBackgroundRed = __webpack_require__(2);
 	
 	$(document).ready(function(){
 	  makeBackgroundRed();
@@ -9898,6 +9898,19 @@
 	
 	return jQuery;
 	}));
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(1);
+	
+	var makeBackgroundRed = function(){
+	  $('body').css('background-color', 'red');
+	};
+	
+	module.exports = makeBackgroundRed;
 
 
 /***/ }
